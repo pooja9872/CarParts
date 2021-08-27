@@ -586,3 +586,12 @@ showItems7();
 function redirectToProductPage() {
     window.location.href = "product.html"
 }
+function redirectToLogin()  {
+    window.location.href = "login.html"
+}
+
+function redirectToShopppingCart()  {
+    window.location.href = "shoppingcart.html"
+}
+
+
