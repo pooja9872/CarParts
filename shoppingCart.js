@@ -64,3 +64,6 @@ function check() {
 function redirectToHome() {
     window.location.href = "index.html";
 }
+function redirectToProductPage() {
+    window.location.href = "product.html"
+}
