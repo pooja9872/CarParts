@@ -583,6 +583,31 @@ showItems7();
 //     menu.style.display = "none";
 // }
 
+let cart = []
+let count = document.getElementById("count")
+function addtocart(product) {
+    if (localStorage.cart != undefined) {
+        cart = localStorage.getItem("cart");
+        cart = JSON.parse(cart);
+    }
+
+    count.innerHTML = cart.length
+    console.log(cart.length)
+    count.innerHTML = cart.length
+    console.log(cart.length)
+    cart.push(JSON.stringify(product));
+    cart = JSON.stringify(cart);
+    localStorage.setItem("cart", cart);
+}
+
+
+if (localStorage.cart != undefined) {
+    cart = localStorage.getItem("cart");
+    cart = JSON.parse(cart);
+}
+count.innerHTML = cart.length
+console.log(cart.length)
+
 function redirectToProductPage() {
     window.location.href = "product.html"
 }
