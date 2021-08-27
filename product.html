@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="nav">
+            <div class="icons">
+                <span class="material-icons">location_on </span>
+                <a>Track Order</a>
+            </div>
+            <div class="icons">
+                <span class="material-icons">speaker_notes</span>
+                <a>Retrived Quote</a>
+            </div>
+        </div>
+        <div id="nav-1">
+            <div id="nav-left">
+                <span class="material-icons" id="menu">menu </span>
+                <img class="carparts-logo" onclick="redirectToHome()" style="cursor: pointer;"
+                    src="https://cld.partsimg.com/image/upload/v1605623427/carparts/logos/wordmark/full_color/CP_WORDMARK_COLOUR_RGB_HR.png" />
+            </div>
+
+            <div class="nav-middle">
+                <div class="search">
+                    <input type="text" placeholder="Search by Part Name, Part Number, Vehicle or Brand">
+                    <button type="submit"><span class="material-icons" id="searchbtn">search</span></button>
+                </div>
+            </div>
+
+            <div id="nav-right">
+                <div class="sign-in" style="cursor: pointer;">
+                    <span class="material-icons" id="signicon">person</span>
+                    <a>Sign In<br>or Create Account</a>
+                </div>
+                <div id="cart" onclick="redirectToCart()" style="cursor: pointer;">
+                    <span class="material-icons" id="carticon">shopping_cart </span>
+                    <span
+                        style="margin-left: -25px;color: rgb(255, 0, 0);font-weight: 700;font-size: 17px;margin-top: -10px;"
+                        id="count">0</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav-2">
+            <div class="nav-2-left">
+                <div>
+                    <span class="material-icons" id="location">location_on </span>
+                </div>
+                <div class="shipaddress">
+                    <span>Shipping to:</span>
+                    <h5>La Sall... 61301</h5>
+                </div>
+            </div>
+            <div>
+                <div class="partsname">
+                    <ul>
+                        <li onclick="dropdown()">Auto Body Parts & Mirrors</li>
+                        <li>Headlights & Lighting</li>
+                        <li>Engine & Drivetrain</li>
+                        <li>Brakes, Suspension & Steering</li>
+                        <li>Interior</li>
+                        <li>Exterior</li>
+                        <li>Tools & Garage</li>
+                        <li>Wheels & Tires</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="dropdown"
+            style="width: 100%; height: 200px; background-color: yellow; position: absolute; display: none;">
+            <div onclick="cross()">X</div>
+        </div>
+
+        <div id="nav-3">
+            <div class="shippingupdates">
+                <h3>Shipping Update</h3>
+                <a>Find Out More</a>
+            </div>
+        </div>
+    </div>
+    <div id="products_container">
+        <div class="product-list">
+            <ul>
+                <li style="color: rgb(51, 51, 51);">Home</li>
+                <li style="color:  rgb(46, 71, 135);">></li>
+                <li style="color: black; font-weight: bold;">Bumper Cover</li>
+            </ul>
+        </div>
+        <div class="productdesp">
+            <h1>Bumper Covers</h1>
+            <span>
+                <p>Driving with a damaged bumper cover isn’t just unsightly. It also puts your life and vehicle
+                    at risk.
+                    Replace it
+                    immediately with a high-quality front bumper cover or rear bumper cover from CarParts.com.
+                    Our
+                    heavy-duty bumper cover
+                    replacements can improve your ride’s appearance and reduce the shock caused by accidents.
+                    All our
+                    products are...</p>
+            </span>
+        </div>
+        <div class="p1">
+            <div class="filter">
+                <h4>Refine by:</h4>
+                <h4>Brand</h4>
+                <div class="brandlabel">
+                    <div>
+                        <input type="checkbox">
+                        <label>Replacement</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>ReplaceXL</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>GenuineXL</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox">
+                        <label>Crown</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox">
+                        <label>Boltan Premiere</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="product-catalogue">
+                <h3>Shop Catalog</h3>
+                <hr style="background-color: rgb(252, 244, 244);">
+                <div id="product-data"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="product.js"></script>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<!-- <style>
+    #container-1 {
+        display: flex;
+    }
+
+    #login {
+        width: 30%;
+        /* background-color: #f9f9f9; */
+        margin-left: 100px;
+        padding: 10px 18px;
+    }
+
+    form {
+        line-height: 20px;
+        padding: 10px 18px;
+        background-color: #f9f9f9;
+    }
+
+    .trackorder {
+        padding: 10px 18px;
+        background-color: #f9f9f9;
+        margin-top: 10px;
+    }
+
+    form label {
+        display: block;
+        line-height: 2;
+    }
+
+    form p {
+        color: rgb(46, 71, 135);
+    }
+
+    #password,
+    #email,
+    #firstname,
+    #lastname,
+    #reemail,
+    #cnfpassword {
+        display: inline-block;
+        width: 70%;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    .capatcha {
+        display: flex;
+        border: 0.5px solid rgb(141, 134, 134);
+        border-radius: 5px;
+        width: 61%;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(148, 146, 146, 0.2), 0 6px 20px 0 rgba(223, 212, 212, 0.19);
+    }
+
+    form button {
+        width: 70%;
+        background-color: rgb(46, 71, 135);
+        color: white;
+        margin-left: 5px;
+        margin-top: 20px;
+        padding: 12px;
+        font-weight: 700;
+        border-radius: 20px;
+        border: none;
+        transition-property: color, background-color, border-color, box-shadow;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+    }
+
+    form button:hover {
+        background-color: #5C6BC0
+    }
+
+    .trackorder span p {
+        margin: 0px;
+    }
+
+    .trackorder h2 {
+        margin-bottom: 2px;
+    }
+
+    .trackorder button {
+        width: 70%;
+        color: rgb(68, 68, 68);
+        margin-left: 5px;
+        margin-top: 20px;
+        padding: 12px;
+        font-weight: 700;
+        border-radius: 20px;
+        border: none;
+        transition-property: color, background-color, border-color, box-shadow;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .trackorder button:hover {
+        background-color: rgb(155, 155, 155);
+    }
+
+    #signup {
+        width: 45%;
+        margin-left: 100px;
+        border: 1px solid red;
+        padding: 0px 0px 0px 20px;
+        margin-top: 20px;
+    } -->
+</style>
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <div class="icons">
+                <span class="material-icons">location_on </span>
+                <a>Track Order</a>
+            </div>
+            <div class="icons">
+                <span class="material-icons">speaker_notes</span>
+                <a>Retrived Quote</a>
+            </div>
+        </div>
+        <div id="nav-1">
+            <div id="nav-left">
+                <span class="material-icons" id="menu">menu </span>
+                <img class="carparts-logo"
+                    src="https://cld.partsimg.com/image/upload/v1605623427/carparts/logos/wordmark/full_color/CP_WORDMARK_COLOUR_RGB_HR.png" />
+            </div>
+
+            <div class="nav-middle">
+                <div class="search">
+                    <input type="text" placeholder="Search by Part Name, Part Number, Vehicle or Brand">
+                    <button type="submit"><span class="material-icons" id="searchbtn">search</span></button>
+                </div>
+            </div>
+
+            <div id="nav-right">
+                <div class="sign-in">
+                    <span class="material-icons" id="signicon">person</span>
+                    <a>Sign In<br>or Create Account</a>
+                </div>
+                <div id="cart">
+                    <span class="material-icons" id="carticon">shopping_cart</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav-2">
+            <div class="nav-2-left">
+                <div>
+                    <span class="material-icons" id="location">location_on </span>
+                </div>
+                <div class="shipaddress">
+                    <span>Shipping to:</span>
+                    <h5>La Sall... 61301</h5>
+                </div>
+            </div>
+            <div>
+                <div class="partsname">
+                    <ul>
+                        <li onclick="dropdown()">Auto Body Parts & Mirrors</li>
+                        <li>Headlights & Lighting</li>
+                        <li>Engine & Drivetrain</li>
+                        <li>Brakes, Suspension & Steering</li>
+                        <li>Interior</li>
+                        <li>Exterior</li>
+                        <li>Tools & Garage</li>
+                        <li>Wheels & Tires</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="dropdown"
+            style="width: 100%; height: 200px; background-color: yellow; position: absolute; display: none;">
+            <div onclick="cross()">X</div>
+        </div>
+
+        <div id="nav-3">
+            <div class="shippingupdates">
+                <h3>Shipping Update</h3>
+                <a>Find Out More</a>
+            </div>
+        </div>
+    </div>
+    <div id="container-1">
+        <div id="login">
+
+            <form onsubmit="redirectToHome(event)">
+                <h1>Sign in</h1>
+                <label>Email Address</label>
+                <input type="email" id="current-email">
+                <label>Password</label>
+                <input type="password" id="current-password">
+
+                <p>Forgot Password?</p>
+                <div class="capatcha">
+                    <label>
+                        <input type="checkbox"> I'm not a robot
+                    </label>
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="32px" height="32px"
+                        style="margin-left: 30px;" />
+                </div>
+
+                <button onclick="checklogin()">SIGN IN</button>
+            </form>
+            <div></div>
+            <div class="trackorder">
+                <h2>Track Order</h2>
+                <span>
+                    <p>Track your order now. No sign-in required.</p>
+                </span>
+
+                <button>VIEW ORDER STATUS</button>
+            </div>
+        </div>
+        <div id="signup">
+            <h1>Create an Account</h1>
+            <form id="registerform" style="background-color: white;">
+                <label>First Name</label>
+                <input type="text" id="firstname">
+
+                <label>Last Name</label>
+                <input type="text" id="lastname">
+
+                <label>Email Address</label>
+                <input type="email" id="register-email">
+
+                <label>Re-enter Email Address</label>
+                <input type="email" id="re-register-email">
+
+                <label>Password (at least 8 characters)</label>
+                <input type="password" id="register-password">
+
+                <label>Confirm Password</label>
+                <input type="password" id="confirm-register-password">
+
+                <div class="capatcha" style="margin-top: 10px; width: 40%; margin-left: 50px;">
+                    <label>
+                        <input type="checkbox"> I'm not a robot
+                    </label>
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="32px" height="32px"
+                        style="margin-left: 30px;" />
+                </div>
+
+                <button onclick="store()">CREATE A NEW ACCOUNT</button>
+            </form>
+            <div style="width: 70%; text-align: center;">
+                <span style="font-size: 14px; margin-left: 20px; color: rgb(155, 155, 155);;">By Creating an
+                    account,
+                    you agree to CarParts.com's
+                    <a style="text-decoration: none;" href="#">Conditions of Use</a> and <a
+                        style="text-decoration: none;" href="#">Privacy
+                        Notice</a></span>
+            </div>
+        </div>
+    </div>
+
+    <hr style="background-color: rgb(219, 209, 209);">
+    <div class="footer">
+        <div class="popularsearch">
+            <span>
+                <strong>Popular Searches :</strong>
+                <a href="#"><span>headlights,</span></a>
+                <a href="#"><span>bumper cover,</span></a>
+                <a href="#"><span>car fender,</span></a>
+                <a href="#"><span>radiator support,</span></a>
+                <a href="#"><span>catalytic converter,</span></a>
+                <a href="#"><span>car mirror,</span></a>
+                <a href="#"><span>car hood,</span></a>
+                <a href="#"><span>step bumper,</span></a>
+                <a href="#"><span>lower control arm,</span></a>
+                <a href="#"><span>tail light,</span></a>
+                <a href="#"><span>window regulator,</span></a>
+                <a href="#"><span>fuel pump replacement,</span></a>
+            </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="footer-1">
+            <div class="footerlist">
+                <div>
+                    <strong>Contact us</strong>
+                </div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">location_on </span>
+                </div>
+                <div class="contactus">
+                    <strong>Address</strong>
+                    <span>
+                        <p style="margin-top: 0px;">4800 Industrial Blvd. Door # 43-45<span style="display: block;">
+                                Peru, IL 61354</span></p>
+                    </span>
+                </div>
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">call</span>
+                </div>
+                <div class="contactus">
+                    <strong>Phone Number</strong>
+                    <span>
+                        <p style="margin-top: 0px;">1-866-529-0412</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">email</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Email Us</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">chat</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Live Chat</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">announcement</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Website Feedback</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Customer Service</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Returns</li>
+                        <li>Retrieve Quote</li>
+                        <li>Coupons</li>
+                        <li>Shipping Policy</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>About Us</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>Company Info</li>
+                        <li>Press Releases</li>
+                        <li>Careers</li>
+                        <li>Reviews</li>
+                        <li>Investor Relations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Blog</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>In the Garage Home</li>
+                        <li>Auto Repair 101</li>
+                        <li>DIY Guides</li>
+                        <li>OBD-II Trouble Codes</li>
+                        <li>Automotive Features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Catalogs</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>All Makes</li>
+                        <li>All Brands</li>
+                        <li>All Parts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div class="footer-2">
+            <div class="carpartslogo">
+                <img
+                    src="https://cld.partsimg.com/image/upload/v1605623358/carparts/logos/badge_wordmark/full_color/CP_LOGO_COLOUR_RGB_HR.png" />
+            </div>
+            <div class="follow">
+                <strong>Follow Us@CarPartscom</strong>
+                <span>
+                    <p>
+                        #DrivingMemories</p>
+                </span>
+                <div style="display: flex; margin-left: 5px;gap: 4px;">
+                    <div class="socialicon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="socialicon">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="socialicon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <span>
+                    <p>Copyright ©2021 CarParts.com, Inc. All Rights Reserved.</p>
+                </span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 2px;">
+                <a>Terms of Use</a>
+                <a>Privacy Policy</a>
+                <a>California Supply Chain Disclosure</a>
+            </div>
+            <div style=" margin-top: 2px;">
+                <a>Accessibility Statement</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+    function store() {
+
+        var fname = document.getElementById('firstname');
+        var lname = document.getElementById("lastname");
+        var emailId = document.getElementById("register-email");
+        var reemailId = document.getElementById("re-register-email")
+        var pw = document.getElementById('register-password');
+        var cnfpwd = document.getElementById('confirm-register-password');
+
+
+        if (fname.value.length == 0) {
+            alert('Enter your first name');
+        }
+        else if (lname.value.length == 0) {
+            alert('Enter your last name');
+        }
+        else if (emailId.value.length == 0) {
+            alert('Enter your email address');
+        }
+        else if (reemailId.value.length == 0) {
+            alert('Re-enter your email address');
+        }
+        else if (emailId.value != reemailId.value) {
+            alert("Re-enter password is not matching");
+        }
+        else if (pw.value.length == 0) {
+            alert('Enter your password ');
+        }
+        else if (pw.value.length !== 8) {
+            alert('Enter Eight digit length password');
+        }
+        else if (pw.value != cnfpwd.value) {
+            alert('Confirm password is not matching');
+        }
+
+        else if (fname.value.length == 0 && lname.value.length == 0 && emailId.value.length == 0 && reemailId.value.length == 0 && pw.length.value == 0 && cnfpwd.value.length == 0) {
+            alert('Enter your all details');
+
+        }
+        else {
+            localStorage.setItem('fname', fname.value);
+            localStorage.setItem('lname', lname.value);
+            localStorage.setItem('emailId', emailId.value);
+            localStorage.setItem('pw', pw.value);
+            alert('Your account has been created successfully');
+        }
+    }
+
+
+    function checklogin() {
+        let emailAddress = document.getElementById('current-email').value;
+        let loginPassword = document.getElementById('current-password').value;
+        let get_email = localStorage.getItem('emailId');
+        let get_password = localStorage.getItem('pw');
+
+        if (emailAddress == get_email && loginPassword == get_password) {
+            alert("You are successfully logged in");
+        }
+        else {
+            alert("Enter correct Email and Password");
+        }
+    }
+
+    function redirectToHome(e) {
+        e.preventDefault();
+        window.location.href = "index.html";
+    }
+
+</script>
+
+<script src="https://kit.fontawesome.com/488e5e3e71.js" crossorigin="anonymous"></script>

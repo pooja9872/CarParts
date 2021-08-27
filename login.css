@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 100%;
+}
+
+#nav {
+  width: 100%;
+  background-color: rgb(46, 71, 135);
+  color: rgb(248, 248, 248);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#nav-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.icons {
+  padding: 5px;
+  width: 12%;
+  display: flex;
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  justify-content: space-evenly;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+#nav-left {
+  width: 30%;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.nav-middle {
+  width: 52%;
+  margin-left: -50px;
+  border: 2px solid rgb(46, 71, 135);
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+#nav-right {
+  width: 20%;
+  margin-top: 10px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carparts-logo {
+  width: 250px;
+  height: 45px;
+  display: inline-block;
+}
+
+#menu {
+  font-size: 40px;
+  color: rgb(46, 71, 135);
+}
+
+.search {
+  display: flex;
+}
+
+.search input[type="text"] {
+  float: left;
+  padding: 10px;
+  border: none;
+  margin-left: 10px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+}
+
+.search button {
+  float: right;
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+  color: rgb(46, 71, 135);
+}
+
+#searchbtn {
+  font-size: 30px;
+}
+
+.sign-in {
+  font-size: 10px;
+  display: flex;
+}
+
+#cart {
+  display: flex;
+}
+
+#signicon {
+  font-size: 40px;
+  color: rgb(46, 71, 135);
+}
+
+#carticon {
+  font-size: 40px;
+  color: rgb(46, 71, 135);
+}
+
+.sign-in a {
+  font-size: 16px;
+  padding: 3px;
+  color: rgb(46, 71, 135);
+}
+
+#nav-2 {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid rgb(212, 212, 212); */
+  /* margin-left: 5px; */
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#nav-3 {
+  width: 100%;
+  background-color: rgb(46, 71, 135);
+}
+
+#nav-4 {
+  width: 100%;
+  background-image: url("https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto/carparts/banners/hs-background_new");
+  background-size: cover;
+  margin: 0px auto;
+  background-repeat: no-repeat;
+  height: 348px;
+  background-color: rgba(51, 51, 51, 0.4);
+  overflow: hidden;
+}
+
+.nav-2-left {
+  width: 10%;
+  border: 1px solid rgb(212, 212, 212);
+  display: flex;
+  line-height: 1.2;
+  height: 50px;
+  justify-content: space-around;
+}
+
+.partsname {
+  width: 100%;
+  margin-left: 10px;
+  /* display: flex; */
+  padding: 25px;
+}
+
+.partsname ul {
+  list-style: none;
+  display: flex;
+}
+
+.partsname ul li {
+  margin-left: 15px;
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.partsname ul li:hover {
+  color: rgb(46, 71, 135);
+  cursor: pointer;
+}
+
+.shipaddress span {
+  font-size: 13px;
+}
+
+.shipaddress h5 {
+  font-size: 15px;
+  color: rgb(46, 71, 135);
+}
+
+#location {
+  color: rgb(46, 71, 135);
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.shippingupdates {
+  width: 21%;
+  display: flex;
+  margin: auto;
+  padding: 9px;
+  justify-content: space-evenly;
+}
+
+.shippingupdates h3 {
+  color: rgb(248, 248, 248);
+  font-size: 18px;
+}
+
+.shippingupdates a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#container-1 {
+  display: flex;
+}
+
+#login {
+  width: 30%;
+  /* background-color: #f9f9f9; */
+  margin-left: 100px;
+  padding: 10px 18px;
+}
+
+form {
+  line-height: 25px;
+  padding: 10px 18px;
+  background-color: #f9f9f9;
+}
+
+.trackorder {
+  padding: 10px 18px;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
+
+form label {
+  display: block;
+  line-height: 2;
+}
+
+form p {
+  margin-top: 10px;
+  color: rgb(46, 71, 135);
+}
+
+#confirm-register-password,
+#register-email,
+#firstname,
+#lastname,
+#current-email,
+#current-password,
+#re-register-email,
+#register-password {
+  display: inline-block;
+  width: 70%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.capatcha {
+  display: flex;
+  border: 0.5px solid rgb(141, 134, 134);
+  border-radius: 5px;
+  width: 61%;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(148, 146, 146, 0.2),
+    0 6px 20px 0 rgba(223, 212, 212, 0.19);
+}
+
+form button {
+  width: 70%;
+  background-color: rgb(46, 71, 135);
+  color: white;
+  margin-left: 5px;
+  margin-top: 20px;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+form button:hover {
+  background-color: #5c6bc0;
+}
+
+.trackorder span p {
+  margin: 0px;
+}
+
+.trackorder h2 {
+  margin-bottom: 2px;
+}
+
+.trackorder button {
+  width: 70%;
+  color: rgb(68, 68, 68);
+  margin-left: 5px;
+  margin-top: 20px;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.trackorder button:hover {
+  background-color: rgb(155, 155, 155);
+}
+
+#signup {
+  width: 45%;
+  margin-left: 100px;
+  padding: 0px 0px 0px 20px;
+  margin-top: 20px;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 10px;
+  /* display: flex; */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.popularsearch {
+  width: 60%;
+  margin: auto;
+  display: flex;
+}
+
+.popularsearch span a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(5, 98, 155);
+  font-weight: normal;
+}
+
+.footer-1 {
+  width: 100%;
+  display: flex;
+}
+
+.footerlist {
+  width: 25%;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.footerlist-1 {
+  width: 20%;
+  margin-top: 60px;
+  padding: 8px;
+  margin-left: 20px;
+}
+
+.contactus {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(51, 51, 51);
+  font-weight: normal;
+}
+
+.contactus p:hover {
+  color: rgb(46, 71, 135);
+}
+
+.faq ul {
+  list-style: none;
+  line-height: 2;
+  margin-left: 5px;
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.faq ul:hover {
+  color: rgb(46, 71, 135);
+}
+
+.footer-2 {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.carpartslogo img {
+  width: 280px;
+  margin-top: 35px;
+  height: 56px;
+  display: inline-block;
+}
+
+.follow {
+  width: 15%;
+  margin-left: 300px;
+  font-size: 14px;
+}
+
+.follow p {
+  margin-top: 0px;
+}
+
+.socialicon {
+  width: 30px;
+  height: 24px;
+  margin-top: 10px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 5px;
+  background-color: rgb(245, 245, 245);
+  color: rgb(68, 68, 68);
+  display: flex;
+  margin-bottom: 0px;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.footer-bottom > div {
+  width: 35%;
+  font-size: 13px;
+  text-align: center;
+}

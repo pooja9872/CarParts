@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <div class="icons">
+                <span class="material-icons">location_on </span>
+                <a>Track Order</a>
+            </div>
+            <div class="icons">
+                <span class="material-icons">speaker_notes</span>
+                <a>Retrived Quote</a>
+            </div>
+        </div>
+        <div id="nav-1">
+            <div id="nav-left">
+                <span class="material-icons" id="menu">menu </span>
+                <img class="carparts-logo" style="cursor: pointer;"
+                    src="https://cld.partsimg.com/image/upload/v1605623427/carparts/logos/wordmark/full_color/CP_WORDMARK_COLOUR_RGB_HR.png" />
+            </div>
+
+            <div class="nav-middle">
+                <div class="search">
+                    <input type="text" placeholder="Search by Part Name, Part Number, Vehicle or Brand">
+                    <button type="submit"><span class="material-icons" id="searchbtn">search</span></button>
+                </div>
+            </div>
+
+            <div id="nav-right">
+                <div class="sign-in" style="cursor: pointer;">
+                    <span class="material-icons" id="signicon">person</span>
+                    <a>Sign In<br>or Create Account</a>
+                </div>
+                <div id="cart" style="cursor: pointer;">
+                    <span class="material-icons" id="carticon">shopping_cart</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav-2">
+            <div class="nav-2-left">
+                <div>
+                    <span class="material-icons" id="location">location_on </span>
+                </div>
+                <div class="shipaddress">
+                    <span>Shipping to:</span>
+                    <h5>La Sall... 61301</h5>
+                </div>
+            </div>
+            <div>
+                <div class="partsname">
+                    <ul>
+                        <li onclick="redirectToProductPage()">Auto Body Parts & Mirrors</li>
+                        <li onclick="redirectToProductPage()">Headlights & Lighting</li>
+                        <li onclick="redirectToProductPage()">Engine & Drivetrain</li>
+                        <li onclick="redirectToProductPage()">Brakes, Suspension & Steering</li>
+                        <li onclick="redirectToProductPage()">Interior</li>
+                        <li onclick="redirectToProductPage()">Exterior</li>
+                        <li onclick="redirectToProductPage()">Tools & Garage</li>
+                        <li onclick="redirectToProductPage()">Wheels & Tires</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="dropdown"
+            style="width: 100%; height: 200px; background-color: yellow; position: absolute; display: none;">
+            <div onclick="cross()">X</div>
+        </div> -->
+
+        <div id="nav-3">
+            <div class="shippingupdates">
+                <h3>Shipping Update</h3>
+                <a>Find Out More</a>
+            </div>
+        </div>
+        <div id="nav-4">
+            <div class="text">
+                <div>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/v1605623740/carparts/logos/badge/white/CP_BADGE_WHITE_RGB_HR.png" />
+                </div>
+                <div class="para">
+                    <h1 style="color: white; text-align: center;">Find the Rights Parts Faster</h1>
+                </div>
+            </div>
+        </div>
+        <div id="nav-5">
+            <img
+                src="https://cld.partsimg.com/image/upload/d_noimage,c_pad,f_auto,q_auto:eco,w_1248,h_300,dpr_3.0/carparts/campaigns/2021-earlylaborday/heroshot-desktop" />
+        </div>
+
+        <div class="image-list">
+            <div>
+                <img
+                    src="https://cld.partsimg.com/image/upload/d_noimage,c_pad,f_auto,q_auto:eco,w_243,h_154,dpr_3.0/carparts/campaigns/2021-earlylaborday/thumbs-coolingfanassemblies" />
+            </div>
+            <div>
+                <img
+                    src="https://cld.partsimg.com/image/upload/d_noimage,c_pad,f_auto,q_auto:eco,w_243,h_154,dpr_3.0/carparts/campaigns/2021-earlylaborday/thumbs-fenderliners" />
+            </div>
+            <div>
+                <img
+                    src="https://cld.partsimg.com/image/upload/d_noimage,c_pad,f_auto,q_auto:eco,w_243,h_154,dpr_3.0/carparts/campaigns/2021-earlylaborday/thumbs-valances" />
+            </div>
+            <div>
+                <img
+                    src="https://cld.partsimg.com/image/upload/d_noimage,c_pad,f_auto,q_auto:eco,w_243,h_154,dpr_3.0/carparts/campaigns/2021-earlylaborday/thumbs-dashcovers" />
+            </div>
+            <div>
+                <img
+                    src="https://cld.partsimg.com/image/upload/d_noimage,c_pad,f_auto,q_auto:eco,w_243,h_154,dpr_3.0/carparts/campaigns/2021-earlylaborday/thumbs-seeall" />
+            </div>
+        </div>
+        <div class="image-list-1">
+            <div class="img-1"></div>
+            <div class="img-2"> </div>
+        </div>
+
+        <div class="image-list-2">
+            <div class="img-3"></div>
+        </div>
+
+        <div class="categories">
+            <h2>Shop by Categories</h2>
+        </div>
+
+        <div class="middle-container">
+            <div class="f-left">
+                <div>
+                    <h1>Auto Body Parts & Mirrors</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-auto-body-parts-and-mirrors" />
+                </div>
+            </div>
+            <div class="f-right">
+                <div id="data"></div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="middle-container-2">
+            <div class="f-left">
+                <div>
+                    <h1>Headlights & Lighting</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-headlights-and-lighting" />
+                </div>
+            </div>
+            <div class="f-right-2">
+                <div id="data1"></div>
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="middle-container-3">
+            <div class="f-left">
+                <div>
+                    <h1>Engine & Drivetrain</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-engine-and-drivetrain" />
+                </div>
+            </div>
+            <div class="f-right-3">
+                <div id="data2"></div>
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="middle-container-4">
+            <div class="f-left">
+                <div>
+                    <h1>Brakes, Suspension & Steering</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-brakes-suspension-and-steering" />
+                </div>
+            </div>
+            <div class="f-right-4">
+                <div id="data3"></div>
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="middle-container-5">
+            <div class="f-left">
+                <div>
+                    <h1>Interior Accessories</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-interior-accessories" />
+                </div>
+            </div>
+            <div class="f-right-5">
+                <div id="data4"></div>
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="middle-container-6">
+            <div class="f-left">
+                <div>
+                    <h1>Exterior Accessories</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-exterior-accessories" />
+                </div>
+            </div>
+            <div class="f-right-6">
+                <div id="data5"></div>
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="middle-container-7">
+            <div class="f-left">
+                <div>
+                    <h1>Wheels</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-wheels-and-tires" />
+                </div>
+            </div>
+            <div class="f-right-7">
+                <div id="data6"></div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="middle-container-8">
+            <div class="f-left">
+                <div>
+                    <h1>Tools & Garage</h1>
+                    <img
+                        src="https://cld.partsimg.com/image/upload/d_noimage.jpg,c_pad,f_auto,q_auto,dpr_auto,e_sharpen,h_350/carparts/home-category/top-category-tools-and-garage" />
+                </div>
+            </div>
+            <div class="f-right-8">
+                <div id="data7"></div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="categories">
+            <h2>Shop by Popular Parts</h2>
+        </div>
+        <div class="popularparts">
+            <div>Axle Assembly</div>
+            <div>Brake Disc and Pad Kit</div>
+            <div>Bumper</div>
+            <div>Bumper Cover</div>
+            <div>Catalytic Converter</div>
+            <div>Control Arm</div>
+            <div>Control Arm Kit</div>
+            <div>Cooling Fan Assembly</div>
+            <div>Door Lock Actuator</div>
+            <div>Driveshaft</div>
+            <div>Exterior Door Handle</div>
+            <div>Fender</div>
+            <div>Fender Liner</div>
+            <div>Fog Light</div>
+            <div>Fuel Pump</div>
+            <div>Fuel Tank</div>
+            <div>Grille Assembly</div>
+            <div>Headlight</div>
+            <div>Hood</div>
+            <div>Ignition Coil</div>
+            <div>Mirror</div>
+            <div>Oxygen Sensor</div>
+            <div>Radiator</div>
+            <div>Radiator Support</div>
+            <div>Shock Absorber and Strut Assembly</div>
+            <div>Step Bumper</div>
+            <div>Tail Light</div>
+            <div>Timing Chain Kit</div>
+            <div>Wheel Hub</div>
+            <div>Window Regulator</div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="allparts">
+            <button>See All Parts</button>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="categories">
+            <h2>Why Choose CarParts.com</h2>
+        </div>
+        <div class="guarantee">
+            <div class="fit">
+                <div>
+                    <strong style="border-bottom: 4px solid rgb(252, 126, 0); ">Guaranteed Fit</strong>
+                </div>
+                <div>
+                    <img style="margin: 10px;"
+                        src="https://cld.partsimg.com/image/upload/carparts/content-assets/Value-Props-Fitment.svg"
+                        width="150px" height="150px" />
+                </div>
+                <span>
+                    <p>Take the guesswork out of shopping for auto parts with CarParts.com. We make purchasing car parts
+                        online easier by
+                        providing accurate and detailed fitment information, which makes for a straightforward and
+                        hassle-free shopping
+                        experience. Our built-in vehicle selector also allows you to search from our catalog of
+                        high-quality aftermarket parts
+                        and accessories by year, make, and model—so you're always guaranteed a perfect fit for your
+                        vehicle.</p>
+                </span>
+            </div>
+            <div class="fit">
+                <div>
+                    <strong style="border-bottom: 4px solid rgb(252, 126, 0); ">Fast Shipping</strong>
+                </div>
+                <div>
+                    <img style="margin: 10px;"
+                        src="https://cld.partsimg.com/image/upload/carparts/content-assets/Value-Props-Shipping.svg"
+                        width="150px" height="150px" />
+                </div>
+                <span>
+                    <p>Get back on the road faster with CarParts.com. We deliver the parts you need, when you need them.
+                        Our three
+                        strategically-located auto parts warehouses are equipped with the latest technologies for
+                        efficient order processing and
+                        faster shipping. Customers within the continental U.S. can expect their car accessories or
+                        replacement parts to arrive
+                        in as little as two (2) business days, when ordered by 12pm ET.</p>
+                </span>
+            </div>
+            <div class="fit">
+                <div>
+                    <strong style="border-bottom: 4px solid rgb(252, 126, 0); ">90-Day Returns</strong>
+                </div>
+                <div>
+                    <img style="margin: 10px;"
+                        src="https://cld.partsimg.com/image/upload/carparts/content-assets/value-props.svg"
+                        width="150px" height="150px" />
+                </div>
+                <span>
+                    <p>At CarParts.com, we're confident that you'll be able to find the right part or accessory for your
+                        car, truck or SUV. But
+                        if for some reason you aren't completely satisfied with your order,At CarParts.com, we're
+                        confident that you'll be able to find the right part or accessory for your car, truck or SUV.
+                        But
+                        if for some reason you aren't completely satisfied with your order,&nbsp;
+                        <a href="#">we accept returns within 90 days</a>of purchase—and we'll give you your money back!
+                        As a leading retailer of aftermarket car parts, our goal is to give our
+                        customers the peace of mind to buy parts online.
+                    </p>
+                </span>
+            </div>
+        </div>
+        <div class="emails">
+            <div class="emaildeals">
+                <h2
+                    style="font-size: 2rem; border-bottom: 4px solid rgb(252, 126, 0); padding-bottom: 7px; color: white;">
+                    Email Deals
+                </h2>
+            </div>
+            <div class="emails-1">
+                <div class="emailsdeals-1">
+                    <p style="font-size: 14px; color: white;">Be the first to receive exclusive promotions, updates and
+                        product announcements. Subscribe to our mailing list now!</p>
+                </div>
+            </div>
+            <div class="emails-2">
+                <div class="emailsdeals-2">
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div class="emailsdeals-3">
+                    <button>Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="categories">
+            <h2>Shop by Popular Makes</h2>
+        </div>
+        <div class="popularmakes">
+            <div>Acura</div>
+            <div>Audi</div>
+            <div>BMW</div>
+            <div>Buick</div>
+            <div>Cadillac</div>
+            <div>Ford</div>
+            <div>GMC</div>
+            <div>Honda</div>
+            <div>Hyundai</div>
+            <div>Jaguar</div>
+            <div>Jeep</div>
+            <div>Kia</div>
+            <div>Land Rover</div>
+            <div>Lexus</div>
+            <div>Chrysler</div>
+            <div>Infinite</div>
+            <div>Dodge</div>
+            <div>Lincoln</div>
+            <div>Mazda</div>
+            <div>Mercedes Benz</div>
+            <div>Mercury</div>
+            <div>Mini</div>
+            <div>Mitsubishi</div>
+            <div>Oldsmobile</div>
+            <div>Pontiac</div>
+            <div>Ram</div>
+            <div>Saab</div>
+            <div>Saturn</div>
+            <div>Scicon</div>
+            <div>Subaru</div>
+            <div>Suzuki</div>
+            <div>Toyota</div>
+            <div>Volkswagen</div>
+            <div>Volvo</div>
+            <div>Ram</div>
+            <div>Chevrolet</div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="allparts">
+            <button>See All Makes</button>
+        </div>
+
+        <div class="categories">
+            <h2>What Our Customers Are Saying</h2>
+        </div>
+        <div>
+            <img src="rating_img.png" width="100%" height="300px" />
+        </div>
+        <div class="categories">
+            <h2>Shop by Popular Brands</h2>
+        </div>
+
+        <div class="popularbrands">
+            <div>A1 Cardone</div>
+            <div>AC Delco</div>
+            <div>Centric</div>
+            <div>Coverlay</div>
+            <div>Crown</div>
+            <div>Dorman</div>
+            <div>Evan Fischer</div>
+            <div>JC Whitney</div>
+            <div>Kool Vue</div>
+            <div>Moog</div>
+            <div>Powerstop</div>
+            <div>Replacement</div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="allparts">
+            <button>See All Brands</button>
+        </div>
+
+    </div>
+    <hr style="background-color: rgb(219, 209, 209);">
+    <div class="footer">
+        <div class="popularsearch">
+            <span>
+                <strong>Popular Searches :</strong>
+                <a href="#"><span>headlights,</span></a>
+                <a href="#"><span>bumper cover,</span></a>
+                <a href="#"><span>car fender,</span></a>
+                <a href="#"><span>radiator support,</span></a>
+                <a href="#"><span>catalytic converter,</span></a>
+                <a href="#"><span>car mirror,</span></a>
+                <a href="#"><span>car hood,</span></a>
+                <a href="#"><span>step bumper,</span></a>
+                <a href="#"><span>lower control arm,</span></a>
+                <a href="#"><span>tail light,</span></a>
+                <a href="#"><span>window regulator,</span></a>
+                <a href="#"><span>fuel pump replacement,</span></a>
+            </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="footer-1">
+            <div class="footerlist">
+                <div>
+                    <strong>Contact us</strong>
+                </div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">location_on </span>
+                </div>
+                <div class="contactus">
+                    <strong>Address</strong>
+                    <span>
+                        <p style="margin-top: 0px;">4800 Industrial Blvd. Door # 43-45<span style="display: block;">
+                                Peru, IL 61354</span></p>
+                    </span>
+                </div>
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">call</span>
+                </div>
+                <div class="contactus">
+                    <strong>Phone Number</strong>
+                    <span>
+                        <p style="margin-top: 0px;">1-866-529-0412</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">email</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Email Us</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">chat</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Live Chat</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">announcement</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Website Feedback</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Customer Service</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Returns</li>
+                        <li>Retrieve Quote</li>
+                        <li>Coupons</li>
+                        <li>Shipping Policy</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>About Us</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>Company Info</li>
+                        <li>Press Releases</li>
+                        <li>Careers</li>
+                        <li>Reviews</li>
+                        <li>Investor Relations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Blog</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>In the Garage Home</li>
+                        <li>Auto Repair 101</li>
+                        <li>DIY Guides</li>
+                        <li>OBD-II Trouble Codes</li>
+                        <li>Automotive Features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Catalogs</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>All Makes</li>
+                        <li>All Brands</li>
+                        <li>All Parts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div class="footer-2">
+            <div class="carpartslogo">
+                <img
+                    src="https://cld.partsimg.com/image/upload/v1605623358/carparts/logos/badge_wordmark/full_color/CP_LOGO_COLOUR_RGB_HR.png" />
+            </div>
+            <div class="follow">
+                <strong>Follow Us@CarPartscom</strong>
+                <span>
+                    <p>
+                        #DrivingMemories</p>
+                </span>
+                <div style="display: flex; margin-left: 5px;gap: 4px;">
+                    <div class="socialicon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="socialicon">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="socialicon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <span>
+                    <p>Copyright ©2021 CarParts.com, Inc. All Rights Reserved.</p>
+                </span>
+            </div>
+            <div style="display: flex; justify-content: space-between; justify-content: center; align-items: center; gap: 10px;"
+                ;>
+                <a>Terms of Use</a>
+                <a>Privacy Policy</a>
+                <a>California Supply Chain Disclosure</a>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+                <a>Accessibility Statement</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="home.js"></script>
+<script src="https://kit.fontawesome.com/488e5e3e71.js" crossorigin="anonymous"></script>
