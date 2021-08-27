@@ -135,3 +135,7 @@ function redirectToLogin()  {
     window.location.href = "login.html"
 }
 
+function redirectToProductPage() {
+    window.location.href = "product.html"
+}
+
