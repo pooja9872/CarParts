@@ -131,3 +131,7 @@ function redirectToCart() {
     window.location.href = "shoppingcart.html"
 }
 
+function redirectToLogin()  {
+    window.location.href = "login.html"
+}
+
