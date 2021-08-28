@@ -47,7 +47,8 @@ function store() {
      }
 
 
-     function checklogin() {
+     function checklogin(e) {
+          e.preventDefault();
          let emailAddress = document.getElementById('current-email').value;
          let loginPassword = document.getElementById('current-password').value;
          let get_email = localStorage.getItem('emailId');
@@ -55,16 +56,13 @@ function store() {
 
          if (emailAddress == get_email && loginPassword == get_password) {
              alert("You are successfully logged in");
+              window.location.href = "index.html";     
          }
          else {
              alert("Enter correct Email and Password");
          }
      }
 
-     function redirectToHome(e) {
-         e.preventDefault();
-         window.location.href = "index.html";
-     }
      function redirectToHome(){
           window.location.href = "index.html";
      }
